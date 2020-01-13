@@ -19,5 +19,16 @@
 </section>
 </div><!-- /.main-wrapper -->
 <footer>JavaScript Samples</footer>
+<script>
+var hour = new Date().getHours();
+
+if(hour >= 19 && hour < 21) {
+	window.alert('도시락 30% 할인!');
+} else if(hour === 19 || hour === 15) {
+	window.alert('도시락 하나 사면 하나 공짜!');
+} else {
+	window.alert('도시락 사세요');
+}
+</script>
 </body>
 </html>
