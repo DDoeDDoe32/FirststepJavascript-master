@@ -16,22 +16,22 @@
 </header>
 <div class="main-wrapper">
 <section>
+	<h1>해야 할 일 목록</h1>
+	<ul id="list">
+	</ul>
 </section>
 </div><!-- /.main-wrapper -->
 <footer>JavaScript Samples</footer>
 <script>
-var enemy = 100;
-var attack;
-var count = 0;
+var todo = ['디자인 샘플 작성', '데이터 정리', '스터디 신청', '우유 사기'];
+todo.push('치과 가기');
 
-window.alert('대전 시작!');
-while(enemy > 0) {
-	attack = Math.floor(Math.random() * 30) + 1;
-	console.log('몬스터에게' + attack + '의 피해를 입혔다!');
-	enemy -= attack;
-	count++;
+for(var i=0; i<todo.length; i++) {
+	var li = document.createElement('li');
+	li.textContent = todo[i];
+	document.getElementById('list').appendChild(li);
 }
-console.log(count + '회 만에 몬스터를 물리쳤다!');
+
 </script>
 </body>
 </html>
